@@ -6,11 +6,13 @@ import About from './Components/About'
 import Contact from './Components/Contact'
 import Policy from './Components/Policy'
 import { Routes, Route } from 'react-router-dom'
+import Share from './Components/Share'
 
 export default function App() {
   return (
     <>
       <Navbar />
+      <Share/>
       <Routes>
         <Route exact path='/' element={<Home />} />
         <Route exact path='/about-us' element={<About/>} />
