@@ -31,17 +31,17 @@ function CardStack() {
 
   return (
     <>
-    <h1 className='text-center text-2xl pt-8 font-bold'>Happy Copying</h1>
-    <div className='grid gap-y-8 gap-x-2 place-items-center py-10 xxs:grid-cols-1 xs:grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4'>
-      {
-        Object.entries(content).map((data, index) => {
-          return (
-            <QuoteCard key={index} data={data} />
+      <h1 className='text-center text-2xl pt-8 font-bold'>Happy Copying</h1>
+      <div className='grid gap-y-8 gap-x-2 place-items-center py-10 xxs:grid-cols-1 xs:grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4'>
+        {
+          Object.entries(content).map((data, index) => {
+            return (
+              <QuoteCard key={index} data={data} />
             )
           })
         }
-    </div>
-        </>
+      </div>
+    </>
   )
 }
 

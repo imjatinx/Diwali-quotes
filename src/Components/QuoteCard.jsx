@@ -3,27 +3,32 @@ import { MdContentCopy } from 'react-icons/md'
 
 function QuoteCard(props) {
 
-  // const clickToCopy = () => {
-  //   var a = document.getElementsByClassName("copy");
-  // }
+  var copy = document.querySelectorAll(".copy");
 
+  for (const copied of copy) {
+    copied.onclick = function () {
+      document.execCommand("copy");
+    };
+    copied.addEventListener("copy", function (event) {
+      let tag = event.currentTarget;
+      tag.style.backgroundColor = "#6419e6";
+      setTimeout(() => {
+        tag.style.backgroundColor = "";
+      }, 400);
+      event.preventDefault();
 
-  // console.log(props.data[1].attributes.image.data.attributes.url)
+      if (event.clipboardData) {
+        event.clipboardData.setData("text/plain", copied.textContent);
+        event.clipboardData.getData("text")
+      };
+    });
+  };
 
   return (
     <>
-      <div className="card w-64 h-28 bg-base-100 border border-white shadow-xl image-full">
+      <div className="hover:before:content-['Click_to_copy'] hover:before:absolute hover:before:bottom-1 hover:before:right-2 hover:before:bg-base-100 hover:before:rounded-none hover:before:px-2 card w-64 h-28 bg-base-100 border border-white shadow-xl image-full copy cursor-pointer transition duration-300 ease-in-out">
         <div className="card-body py-3 relative">
-          {/* <img src={`https://radiant-sands-42865.herokuapp.com${props.data[1].attributes.image.data.attributes.url}?updated_at=2022-10-02T14:18:49.409Z`} alt="Quotes Happy Diwali SMS Shayari" /> */}
-          <p className='copy'>{props.data[1].attributes.quote}</p>
-          <div className='absolute flex justify-between bottom-2 right-2 tooltip tooltip-left' data-tip="Click to copy">
-            <span className='text-primary hidden'>copied</span>
-            <button onClick={() => {
-              // clickToCopy()
-            }}>
-              <MdContentCopy className='text-3xl cursor-pointer hover:text-primary' />
-            </button>
-          </div>
+          <p>{props.data[1].attributes.quote}</p>
         </div>
       </div>
     </>
