@@ -31,7 +31,8 @@ function CardStack() {
 
   return (
     <>
-      <h1 className='text-center text-2xl pt-8 font-bold'>Happy Copying</h1>
+      <h1 className='text-center text-2xl pt-8 font-bold'>Get 100+ Advance Happy diwali short quotes | just copy and share with your love one.</h1>
+      <p className='mx-44'>Celebrate this diwali with short and fresh quotes from <span className='font-bold'>"Happy Diwali SMS"</span> team and also you can share this page with all your whatsApp contacts, Facebook page Groups and twitter handle.</p>
       <div className='grid gap-y-8 gap-x-2 place-items-center py-10 xxs:grid-cols-1 xs:grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4'>
         {
           Object.entries(content).map((data, index) => {

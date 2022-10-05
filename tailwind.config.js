@@ -10,6 +10,9 @@ module.exports = {
         'xs': { 'max': '640px' },
         'xxs': { 'max': '532px' }
       },
+      backgroundImage: {
+        'quotebg': "url('./Assests/quote_bg.jpg')",
+      }
     },
   },
   plugins: [require("daisyui")],
