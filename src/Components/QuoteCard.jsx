@@ -11,7 +11,7 @@ function QuoteCard(props) {
     copied.addEventListener("copy", function (event) {
       let tag = event.currentTarget;
       tag.style.backgroundColor = "#6419e6";
-      tag.style.transform = "scale(1.1)";
+      tag.style.transform = "scale(1.05)";
       setTimeout(() => {
         tag.style.backgroundColor = "";
         tag.style.transform = "scale(1)";

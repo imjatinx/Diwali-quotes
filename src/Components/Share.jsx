@@ -7,7 +7,7 @@ export default function Share() {
 
     return (
         <div>
-            <ul className='bg-white z-50 h-max fixed grid grid-flow-row grid-cols-5 place-content-center w-full bottom-0 sm:top-1/2 sm:-translate-y-1/2 sm:w-12 sm:flex sm:flex-col md:top-1/2 md:-translate-y-1/2 md:w-12 lg:top-1/2 lg:-translate-y-1/2 lg:w-12'>
+            <ul className='bg-white z-50 h-max fixed grid grid-flow-row grid-cols-5 place-content-center w-full bottom-0 sm:top-1/2 sm:-translate-y-1/2 sm:w-12 sm:flex sm:flex-col md:top-1/2 md:-translate-y-1/2 md:w-12 lg:top-1/2 lg:-translate-y-1/2 lg:w-12 shadow shadow-slate-800'>
                 <a href={`http://www.facebook.com/share.php?u=www.happydiwalisms.in&title=Wish you a very a happy diwali from happy diwali sms team`} target='_blank'>
                     <li className='bg-[#3b5998]'>
                         <div className='py-4 px-3 flex justify-center'>
